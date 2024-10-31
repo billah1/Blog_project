@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\WebsiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,5 +51,28 @@ Route::middleware([
     Route::post('delete-author',[AuthorController::class,'deleteAuthor'])->name('delete-author');
     Route::get('edit-author/{id}',[AuthorController::class,'editAuthor'])->name('edit-author');
     Route::post('update-author',[AuthorController::class,'updateAuthor'])->name('update-author');
+
+    Route::get('add-site',[SettingController::class,'addsite'])->name('add-site');
+    Route::post('new-site',[SettingController::class,'savesite'])->name('new-site');
+    Route::get('manage-site',[SettingController::class,'managesite'])->name('manage-site');
+    Route::get('status/{id}',[SettingController::class,'status'])->name('status');
+    Route::post('delete-site',[SettingController::class,'deletesite'])->name('delete-site');
+    Route::get('edit-site/{id}',[SettingController::class,'editsite'])->name('edit-site');
+    Route::post('update-site',[SettingController::class,'updatesite'])->name('update-site');
+
+
+    Route::get('add-website',[WebsiteController::class,'addwebsite'])->name('add-website');
+    Route::post('new-website',[WebsiteController::class,'savewebsite'])->name('new-website');
+    Route::get('manage-website',[WebsiteController::class,'managewebsite'])->name('manage-website');
+    Route::get('status/{id}',[WebsiteController::class,'status'])->name('status');
+    Route::post('delete-website',[WebsiteController::class,'deletewebsite'])->name('delete-website');
+    Route::get('edit-website/{id}',[WebsiteController::class,'editwebsite'])->name('edit-website');
+    Route::post('update-website',[WebsiteController::class,'updatewebsite'])->name('update-website');
+
+
+
+
+
+
 
 });

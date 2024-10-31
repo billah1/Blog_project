@@ -41,6 +41,21 @@
                     </nav>
                 </div>
 
+
+                      <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#setting" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    Setting Module
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="setting" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="{{ route('add-site') }}"> Add site </a>
+                        <a class="nav-link" href="{{ route('manage-site') }}"> Manage site </a>
+                        <a class="nav-link" href="{{ route('add-website') }}">Add Website </a>
+                        <a class="nav-link" href="{{ route('manage-website') }}">Manage Website </a>
+                    </nav>
+                </div>
+
             </div>
         </div>
         <div class="sb-sidenav-footer">
